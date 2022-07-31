@@ -1,3 +1,4 @@
+<<<<<<< HEADgit
 * {
     padding: 0px;
     margin: 0px;
@@ -12,3 +13,26 @@
     border-radius: 15px;
   }
 
+=======
+header {
+  background: rgb(47, 39, 18);
+  background: -moz-linear-gradient(
+    left,
+    rgb(47, 39, 18) 0%,
+    rgb(86, 153, 170) 50%,
+    rgb(144, 81, 38) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(47, 39, 18) 0%,
+    rgb(86, 153, 170) 50%,
+    rgb(144, 81, 38) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(47, 39, 18) 0%,
+    rgb(86, 153, 170) 50%,
+    rgb(144, 81, 38) 100%
+  );
+}
+>>>>>>> main
