@@ -49,3 +49,7 @@ h1 {
   width: 200px;
   height: auto;
 }
+
+.carousel-inner img{
+  margin:auto;
+}
