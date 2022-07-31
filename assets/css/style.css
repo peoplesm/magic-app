@@ -1,3 +1,19 @@
+<<<<<<< HEADgit
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;  /* <===  */
+    border-radius: 15px;
+  }
+
+=======
 header {
   background: rgb(47, 39, 18);
   background: -moz-linear-gradient(
@@ -19,3 +35,4 @@ header {
     rgb(144, 81, 38) 100%
   );
 }
+>>>>>>> main
