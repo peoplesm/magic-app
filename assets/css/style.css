@@ -28,11 +28,7 @@ li {
 header {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   justify-content: space-between;
-=======
-  border-bottom: #140905 2px solid;
->>>>>>> main
   padding: 5px;
   background: rgb(47, 39, 18);
   background: -moz-linear-gradient(
