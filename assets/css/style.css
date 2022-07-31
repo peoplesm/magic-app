@@ -38,3 +38,7 @@ h1 {
   color: aliceblue;
   text-shadow: 2px 2px 2px #140905;
 }
+
+.carousel-inner img{
+  margin:auto;
+}
