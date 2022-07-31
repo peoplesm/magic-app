@@ -6,6 +6,11 @@
   overflow: hidden;
   border-radius: 15px;
 }
+body {
+background-image: url(https://i.stack.imgur.com/FzoNL.jpg);
+  background-repeat:repeat;
+  color: white;
+}
 
 header {
   background: rgb(47, 39, 18);
