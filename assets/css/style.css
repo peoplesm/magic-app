@@ -14,16 +14,12 @@ body {
 }
 
 ul {
-    list-style-type: none;
-   }
-
-li {
-    display: inline;
+  list-style-type: none;
 }
 
-/* .headlogo {
-    height: 10%;
-} */
+li {
+  display: inline;
+}
 
 header {
   display: flex;
@@ -49,16 +45,16 @@ header {
     rgb(86, 153, 170) 50%,
     rgb(144, 81, 38) 100%
   );
+  border-bottom: #140905 solid 2px;
 }
 
 nav {
-    margin: 20px;
+  margin: 20px;
 }
 
 .image-logo {
-    display: flex;
-    justify-content: baseline;
-
+  display: flex;
+  justify-content: baseline;
 }
 
 h1 {
@@ -70,10 +66,10 @@ h1 {
 }
 
 .headlogo {
-  width: 200px;
-  height: auto;
+  height: 175px;
+  width: auto;
 }
 
-.carousel-inner img{
-  margin:auto;
+.carousel-inner img {
+  margin: auto;
 }
