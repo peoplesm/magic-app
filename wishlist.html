@@ -1,43 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Almendra&family=Eagle+Lake&display=swap"
+      rel="stylesheet"/>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Magic App</title>
-  </head>
+    <title>Wishlist</title>
+</head>
+<body>
+  <header>
+    <div class="image-logo">
+      <img src="./assets/images/mtg-logo-2.png" class="headlogo" />
+      <h1>Card <br />Wishlist <br />Creator</h1>
+    </div>
+    <nav>
+      <ul>
+        <button>
+          <li id="home"><a href="index.html">Home</a></li>
+        </button>
+        <button>
+          <li id="create"><a href="create.html">Create</a></li>
+        </button>
+        <button>
+          <li id="wishlist"><a href="wishlist.html">Wishlist</a></li>
+        </button>
+      </ul>
+    </nav>
+  </header>
+      <!-- form info //gif // wishlist should append here -->
+      <section>
+        <div class="form-info"></div>
+      </section>
 
-  <body>
-    <header>
-      <div class="image-logo">
-        <img src="./assets/images/mtg-logo-2.png" class="headlogo" />
-        <h1>Card <br />Wishlist <br />Creator</h1>
+      <form>
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form4Example1" class="form-control" />
+          <label class="form-label" for="form4Example1">Wishlist Name</label>
+        </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form4Example2" class="form-control" />
+          <label class="form-label" for="form4Example2">Date</label>
+        </div>
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control comment" id="form4Example3" rows="4"></textarea>
+          <label class="form-label" for="form4Example3">Comment</label>
+        </div>  
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block">Send</button>
+      </form>
+      <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="form1" class="form-control gif-search"/>
+          <label class="form-label" for="form1">GIF Search</label>
+        </div>
+        <button type="button" class="btn btn-primary gif">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
-      <nav>
-        <ul>
-          <button>
-            <li id="home"><a href="index.html">Home</a></li>
-          </button>
-          <button>
-            <li id="create"><a href="create.html">Create</a></li>
-          </button>
-          <button>
-            <li id="wishlist"><a href="wishlist.html">Wishlist</a></li>
-          </button>
-        </ul>
-      </nav>
-    </header>
-    Wishlist PAGE
-
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
-    ></script>
+    
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
     <script src="./assets/js/app.js"></script>
-  </body>
+</body>
 </html>
