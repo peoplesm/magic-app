@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almendra&family=Eagle+Lake&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
       rel="stylesheet"
@@ -20,16 +26,42 @@
       </div>
       <nav>
         <ul>
-          <li id="home">Home</li>
-          <li id="create">Create</li>
-          <li id="wishlist">Wishlist</li>
+          <button>
+            <li id="home"><a href="index.html">Home</a></li>
+          </button>
+          <button>
+            <li id="create"><a href="create.html">Create</a></li>
+          </button>
+          <button>
+            <li id="wishlist"><a href="wishlist.html">Wishlist</a></li>
+          </button>
         </ul>
       </nav>
     </header>
-    <div class="hero-image">
-      <div class="hero-text">
-        <h1>I am John Doe</h1>
-        <p>And I'm a Photographer</p>
+    <div
+      class="p-5 text-center bg-image rounded-3"
+      style="
+        background-image: url('https://media.magic.wizards.com/images/featured/EN_Sorin_Header.jpg');
+        height: 400px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Magic: The Gathering Card Wishlist Creator</h1>
+            <h4 class="mb-3">
+              Use our wishlist generator to create a reference list of cards you
+              wish to purchase. You can save a list on your personal device and
+              compare your cards to others!
+            </h4>
+            <a
+              class="btn btn-outline-light btn-lg"
+              href="create.html"
+              role="button"
+              >Create Now</a
+            >
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
