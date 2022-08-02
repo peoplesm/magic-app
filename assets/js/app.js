@@ -1,6 +1,11 @@
 let mtgURL = "https://api.magicthegathering.io/v1/cards";
 const slides = document.querySelectorAll(".slider");
 const twitterFeedEl = document.querySelector(".twitterfeed");
+let gifyURL = "https://api.giphy.com/v1/gifs/random?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&tag="
+let gifSearch = document.querySelector(".gif-search");
+let comment = document.querySelector(".comment");
+let gif = document.querySelector(".gif");
+let formInfo = document.querySelector(".form-info")
 
 // loop through slides and set each slides translateX property to index * 100%
 
@@ -109,3 +114,25 @@ fetch(
 });
 
 // https://api.twitter.com/2/tweets/search/recent?query=from:wizards_magic&tweet.fields=created_at&max_results=10
+
+function getGIF(){
+  fetch(gifyURL) 
+  .then(function (response) {
+    let gifyAPI = gifyURL + gifSearch.value.trim() + "&rating=pg";
+    console.log(gifSearch.value)
+    fetch(gifyAPI)
+    if(response.ok){
+    response.json().then(function (data) {
+      console.log(data.data.images.downsized_small.mp4);
+      let gifAttach = data.data.images.downsized_small.mp4;
+      let addGif = document.innerHTML= "<img src=" + gifAttach + ">";
+      formInfo.append(addGif);
+    })
+    }
+
+  })
+
+}
+gif.addEventListener("click",function(){
+  getGIF();  
+})

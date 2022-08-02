@@ -73,3 +73,19 @@ h1 {
 .carousel-inner img {
   margin: auto;
 }
+
+.form-control{
+  color:white; 
+  font-family: monospace;
+  text-rendering: initial;
+}
+
+textarea{
+animation-name: none;
+visibility: visible;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  color:white;
+}
