@@ -6,7 +6,7 @@ let gifSearch = document.querySelector(".gif-search");
 let comment = document.querySelector(".comment");
 let gif = document.querySelector(".gif");
 let formInfo = document.querySelector(".form-info")
-let picBlock = document.querySelector(".carousel-item");
+let picBlock = document.querySelectorAll(".carousel-item");
 let picImg = document.createElement("img");
 
 // loop through slides and set each slides translateX property to index * 100%
@@ -110,9 +110,9 @@ function populateRandomCards() {
 function setRandomCards() {
   console.log(randomCardArr);
   for (let i = 0; i < randomCardArr.length; i++) {
-    if (picBlock.dataset.cardnum == i + 1) {
+    if (picBlock[i].dataset.cardnum == i + 1) {
       let picImg = document.createElement("img");
-      picBlock.append(picImg);
+      picBlock[i].append(picImg);
       picImg.setAttribute("src", randomCardArr[i]);
     }
   }
