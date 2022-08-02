@@ -1,8 +1,7 @@
 let mtgURL = "https://api.magicthegathering.io/v1/cards";
 const slides = document.querySelectorAll(".slider");
 const twitterFeedEl = document.querySelector(".twitterfeed");
-
-let gifyURL = "https://api.giphy.com/v1/gifs/random?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&tag="
+let gifyURL = "https://api.giphy.com/v1/gifs/search?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&q="
 let gifSearch = document.querySelector(".gif-search");
 let comment = document.querySelector(".comment");
 let gif = document.querySelector(".gif");
@@ -153,14 +152,16 @@ var requestOptions = {
 function getGIF(){
   fetch(gifyURL) 
   .then(function (response) {
-    let gifyAPI = gifyURL + gifSearch.value.trim() + "&rating=pg";
-    console.log(gifSearch.value)
+    let gifyAPI = gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
+    console.log(gifyAPI)
     fetch(gifyAPI)
     if(response.ok){
     response.json().then(function (data) {
-      console.log(data.data.images.downsized_small.mp4);
-      let gifAttach = data.data.images.downsized_small.mp4;
-      let addGif = document.innerHTML= "<img src=" + gifAttach + ">";
+      console.log(data.data[0].images.original.url);
+      let gifAttach = data.data[0].images.original.url;
+      // let addGif = document.innerHTML= '<img src =  "'+ gifAttach +'" title="GIF">';
+      let addGif = document.createElement("img");
+      addGif.setAttribute("src", gifAttach);
       formInfo.append(addGif);
     })
     }
