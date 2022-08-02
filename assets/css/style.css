@@ -11,7 +11,7 @@ body {
   background-image: url(../../assets/images/dark-denim.jpg);
   background-repeat: repeat;
   color: white;
-  font-family: 'Eagle Lake', cursive;
+  font-family: "Eagle Lake", cursive;
 }
 
 ul {
@@ -89,7 +89,6 @@ nav button:hover a {
   color: black;
 }
 
-
 .btn:hover {
   background-color: white;
   color: black;
@@ -99,18 +98,18 @@ nav button:hover a {
   margin: auto;
 }
 
-.form-control{
-  color:white; 
+.form-control {
+  color: white;
   font-family: monospace;
   text-rendering: initial;
 }
 
-textarea{
-animation-name: none;
-visibility: visible;
+textarea {
+  animation-name: none;
+  visibility: visible;
 }
 
 .form-control:focus {
   box-shadow: none;
-  color:white;
+  color: white;
 }
