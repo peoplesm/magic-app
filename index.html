@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almendra&family=Eagle+Lake&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
       rel="stylesheet"
@@ -20,16 +26,42 @@
       </div>
       <nav>
         <ul>
-          <li id="home">Home</li>
-          <li id="create">Create</li>
-          <li id="wishlist">Wishlist</li>
+          <button>
+            <li id="home"><a href="index.html">Home</a></li>
+          </button>
+          <button>
+            <li id="create"><a href="create.html">Create</a></li>
+          </button>
+          <button>
+            <li id="wishlist"><a href="wishlist.html">Wishlist</a></li>
+          </button>
         </ul>
       </nav>
     </header>
-    <div class="hero-image">
-      <div class="hero-text">
-        <h1>I am John Doe</h1>
-        <p>And I'm a Photographer</p>
+    <div
+      class="p-5 text-center bg-image rounded-3"
+      style="
+        background-image: url('https://media.magic.wizards.com/images/featured/EN_Sorin_Header.jpg');
+        height: 400px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Magic: The Gathering Card Wishlist Creator</h1>
+            <h4 class="mb-3">
+              Use our wishlist generator to create a reference list of cards you
+              wish to purchase. You can save a list on your personal device and
+              compare your cards to others!
+            </h4>
+            <a
+              class="btn btn-outline-light btn-lg"
+              href="create.html"
+              role="button"
+              >Create Now</a
+            >
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -45,40 +77,60 @@
             data-mdb-ride="carousel"
           >
             <div class="carousel-inner">
-              <div class="carousel-item active" data-mdb-interval="4000">
-                <img
+              <div
+                class="carousel-item active"
+                data-mdb-interval="4000"
+                data-cardnum="1"
+              >
+                <!-- <img
                   class="card 2xm border-black"
                   alt="thoughtseize"
                   src="https://static.cardkingdom.com/images/magic-the-gathering/double-masters-box-toppers/thoughtseize-37107.jpg"
-                />
+                /> -->
               </div>
-              <div class="carousel-item" data-mdb-interval="4000">
-                <img
+              <div
+                class="carousel-item"
+                data-mdb-interval="4000"
+                data-cardnum="2"
+              >
+                <!-- <img
                   class="card 2xm border-black"
                   alt="dark confidant"
                   src="https://static.cardkingdom.com/images/magic-the-gathering/double-masters-box-toppers/dark-confidant-80924.jpg"
-                />
+                /> -->
               </div>
-              <div class="carousel-item" data-mdb-interval="4000">
-                <img
+              <div
+                class="carousel-item"
+                data-mdb-interval="4000"
+                data-cardnum="3"
+              >
+                <!-- <img
                   class="card 2xm border-black"
                   alt="judy"
                   src="https://static.cardkingdom.com/images/magic-the-gathering/promotional/judith-the-scourge-diva-prerelease-foil-50318.jpg"
-                />
+                /> -->
               </div>
-              <div class="carousel-item" data-mdb-interval="4000">
-                <img
+              <div
+                class="carousel-item"
+                data-mdb-interval="4000"
+                data-cardnum="4"
+              >
+                <!-- <img
                   class="card 2xm border-black"
                   alt="xenagos"
                   src="https://static.cardkingdom.com/images/magic-the-gathering/secret-lair/xenagos-god-of-revels-foil-51493.jpg"
-                />
+                /> -->
               </div>
-              <div class="carousel-item" data-mdb-interval="4000">
-                <img
+              <div
+                class="carousel-item"
+                data-mdb-interval="4000"
+                data-cardnum="5"
+              >
+                <!-- <img
                   class="card 2xm border-black"
                   alt="thalia"
                   src="https://static.cardkingdom.com/images/magic-the-gathering/dark-ascension/thalia-guardian-of-thraben-75912.jpg"
-                />
+                /> -->
               </div>
             </div>
             <!-- <button
@@ -109,7 +161,7 @@
         </main>
         <aside class="col-4 twitter">
           <div class="twitterfeed">
-            <!-- <a
+            <a
               class="twitter-timeline"
               data-width="500"
               data-height="500"
@@ -121,7 +173,7 @@
               async
               src="https://platform.twitter.com/widgets.js"
               charset="utf-8"
-            ></script> -->
+            ></script>
           </div>
         </aside>
       </div>
