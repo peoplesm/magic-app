@@ -42,7 +42,29 @@
         </ul>
       </nav>
     </header>
-    CREATE PAGE
+    <main class="container">
+      <div class="row p-2">
+        <div class="col-4">
+          <form class="form-outline search-input">
+            <input type="text" id="form12" class="form-control searchInput" />
+            <label class="form-label" for="form12" style="color: white"
+              >Search for a Card</label
+            ><button
+              class="btn btn-black search"
+              type="submit"
+              id="button-addon1"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        <div class="col-4">
+          Results
+          <ul class="search-results"></ul>
+        </div>
+        <div class="col-4">Recently Added</div>
+      </div>
+    </main>
 
     <script
       type="text/javascript"

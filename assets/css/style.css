@@ -113,3 +113,7 @@ textarea {
   box-shadow: none;
   color: white;
 }
+
+.search-input {
+  display: flex;
+}
