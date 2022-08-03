@@ -26,6 +26,7 @@ function getGIF() {
         // let addGif = document.innerHTML= '<img src =  "'+ gifAttach +'" title="GIF">';
         let addGif = document.createElement("img");
         addGif.setAttribute("src", gifAttach);
+        addGif.classList.add("gifClass");
         gifSection.append(addGif);
       });
     }
@@ -50,11 +51,11 @@ gif.addEventListener("click", function () {
 
 // displaying cards on wishlist
 
-function displayCards() {
-  cardWishlist.innerHTML = localStorage.getItem("placeholder-value");
-}
+// function displayCards() {
+//   cardWishlist.innerHTML = localStorage.getItem("placeholder-value");
+// }
 
-displayCards();
+// displayCards();
 
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
