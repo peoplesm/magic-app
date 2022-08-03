@@ -114,10 +114,26 @@ textarea {
   color: white;
 }
 
+.sub-page {
+  display: flex;
+  justify-content: center;
+  color: #f27c38;
+  font-weight: bolder;
+}
+
 .search-input {
   display: flex;
 }
 
 .card-result-img:hover {
   transform: scale(2.5);
+}
+.form-values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gifClass {
+  width: 300px;
+  height: auto;
 }
