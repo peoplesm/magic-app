@@ -114,6 +114,10 @@ textarea {
   color: white;
 }
 
+
+.search-input {
+  display: flex;
+}
 .form-values {
   display: flex;
   justify-content: space-between;
