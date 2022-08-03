@@ -1,3 +1,5 @@
+let cardWishlist = document.querySelector(".container");
+
 let gifyURL =
   "https://api.giphy.com/v1/gifs/search?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&q=";
 let gifSearch = document.querySelector(".gif-search");
@@ -7,7 +9,7 @@ let formInfo = document.querySelector(".form-info");
 
 function getGIF() {
   let gifyAPI =
-  gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
+    gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
   fetch(gifyAPI).then(function (response) {
     fetch(gifyAPI);
     if (response.ok) {
@@ -25,3 +27,11 @@ function getGIF() {
 gif.addEventListener("click", function () {
   getGIF();
 });
+
+// displaying cards on wishlist
+
+function displayCards() {
+  cardWishlist.innerHTML = localStorage.getItem("placeholder-value");
+}
+
+displayCards();
