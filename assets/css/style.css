@@ -114,11 +114,11 @@ textarea {
   color: white;
 }
 
-/* STYLE FOR WISHLIST.HTML PAGE*/
-.wishlist {
+.sub-page {
   display: flex;
   justify-content: center;
   color: #f27c38;
+  font-weight: bolder;
 }
 
 .search-input {
