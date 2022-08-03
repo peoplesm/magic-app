@@ -6,6 +6,7 @@ function handleInput(event) {
   event.preventDefault();
   let searchInput = searchInputEl.value;
   console.log(searchInput);
+  resultsEl.innerHTML = "";
   searchCard(searchInput);
   searchInputEl.value = "";
 }
@@ -20,11 +21,13 @@ function searchCard(searchInput) {
         console.log(data);
         for (let i = 0; i < data.data.length; i++) {
           console.log("hello");
-          let card = document.createElement("li");
+
           let cardImg = document.createElement("img");
-          resultsEl.append(card);
-          card.append(cardImg);
+          resultsEl.append(cardImg);
+
           cardImg.setAttribute("src", data.data[i].image_uris.normal);
+          cardImg.setAttribute("style", "width: 150px");
+          cardImg.classList.add("card-result-img");
         }
       });
     }

@@ -117,3 +117,7 @@ textarea {
 .search-input {
   display: flex;
 }
+
+.card-result-img:hover {
+  transform: scale(2.5);
+}
