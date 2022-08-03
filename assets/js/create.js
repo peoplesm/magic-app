@@ -3,6 +3,7 @@ let searchBtn = document.querySelector(".search");
 let resultsEl = document.querySelector(".search-results");
 let recentAddEl = document.querySelector(".recently-added");
 let saveListBtn = document.querySelector(".save-list");
+let nameListBtn = document.querySelector(".name-list");
 
 function handleInput(event) {
   event.preventDefault();
@@ -78,7 +79,15 @@ function removeLi(event) {
   console.log(savedCardArr);
 }
 
-function handleSave() {}
+function handleSave() {
+  localStorage.setItem("deck", JSON.stringify(savedCardArr));
+}
+
+function handleName() {
+  handleSave();
+  location.href = "./wishlist.html";
+}
 
 searchBtn.addEventListener("click", handleInput);
-// saveListBtn.addEventListener("click", handleSave);
+saveListBtn.addEventListener("click", handleSave);
+nameListBtn.addEventListener("click", handleName);
