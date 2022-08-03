@@ -121,6 +121,10 @@ textarea {
   color: #f27c38;
 }
 
+.search-input {
+  display: flex;
+}
+
 .form-values {
   display: flex;
   justify-content: space-between;
