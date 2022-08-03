@@ -129,3 +129,8 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+
+.gifClass {
+  width: 300px;
+  height:auto;
+}
