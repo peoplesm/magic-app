@@ -6,14 +6,13 @@ let gif = document.querySelector(".gif");
 let formInfo = document.querySelector(".form-info");
 
 function getGIF() {
-  fetch(gifyURL).then(function (response) {
-    let gifyAPI =
-      gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
-    console.log(gifyAPI);
+  let gifyAPI =
+  gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
+  fetch(gifyAPI).then(function (response) {
     fetch(gifyAPI);
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data.data[0].images.original.url);
+        console.log(response);
         let gifAttach = data.data[0].images.original.url;
         // let addGif = document.innerHTML= '<img src =  "'+ gifAttach +'" title="GIF">';
         let addGif = document.createElement("img");
