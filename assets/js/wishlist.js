@@ -50,11 +50,11 @@ gif.addEventListener("click", function () {
 
 // displaying cards on wishlist
 
-function displayCards() {
-  cardWishlist.innerHTML = localStorage.getItem("placeholder-value");
-}
+// function displayCards() {
+//   cardWishlist.innerHTML = localStorage.getItem("placeholder-value");
+// }
 
-displayCards();
+// displayCards();
 
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
