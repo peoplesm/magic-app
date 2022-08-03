@@ -1,11 +1,12 @@
-let mtgURL = "https://api.magicthegathering.io/v1/cards";
-const slides = document.querySelectorAll(".slider");
-const twitterFeedEl = document.querySelector(".twitterfeed");
+//Old attempts
+// let mtgURL = "https://api.magicthegathering.io/v1/cards";
+// const slides = document.querySelectorAll(".slider");
+// const twitterFeedEl = document.querySelector(".twitterfeed");
+
 let picBlock = document.querySelectorAll(".carousel-item");
 let picImg = document.createElement("img");
 
 //scryfall gets one random card
-
 let i = 0;
 let randomCardArr = [];
 function populateRandomCards() {
