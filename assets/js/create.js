@@ -26,7 +26,8 @@ function searchCard(searchInput) {
           resultsEl.append(cardImg);
 
           cardImg.setAttribute("src", data.data[i].image_uris.normal);
-          cardImg.setAttribute("style", "width: 150px");
+          cardImg.setAttribute("style", "width: 150px; border-radius: 10px");
+
           cardImg.classList.add("card-result-img");
         }
       });
