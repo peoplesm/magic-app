@@ -127,6 +127,8 @@ textarea {
 }
 
 .card-result-img:hover {
+  position: relative;
+  z-index: 5;
   transform: scale(2.5);
   cursor: pointer;
 }
@@ -151,4 +153,9 @@ textarea {
   cursor: pointer;
   background-color: white;
   color: black;
+}
+
+.recent-btns {
+  border: white solid 1px;
+  margin-bottom: 5px;
 }
