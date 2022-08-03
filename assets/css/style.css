@@ -14,11 +14,11 @@ body {
   font-family: "Eagle Lake", cursive;
 }
 
-ul {
+.nav-ul {
   list-style-type: none;
 }
 
-li {
+.nav-ul.li {
   display: inline;
 }
 
@@ -128,6 +128,7 @@ textarea {
 
 .card-result-img:hover {
   transform: scale(2.5);
+  cursor: pointer;
 }
 .form-values {
   display: flex;
@@ -137,4 +138,17 @@ textarea {
 .gifClass {
   width: 300px;
   height: auto;
+}
+
+/* Create.html styles */
+.card-li {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.card-li:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }
