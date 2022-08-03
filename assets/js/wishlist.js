@@ -1,9 +1,18 @@
 let gifyURL =
   "https://api.giphy.com/v1/gifs/search?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&q=";
 let gifSearch = document.querySelector(".gif-search");
-let comment = document.querySelector(".comment");
 let gif = document.querySelector(".gif");
-let formInfo = document.querySelector(".form-info");
+let formInfo = document.querySelector(".name-date");
+let wishName = document.querySelector(".name");
+let wishDate = document.querySelector(".date");
+let wishComment = document.querySelector(".comment");
+let submitBtn = document.querySelector(".send");
+let date = document.createElement("p");
+// let comment = document.createElement("p");
+let gifSection =document.querySelector(".gif-section");
+let comment = document.querySelector(".comment-section")
+
+
 
 function getGIF() {
   let gifyAPI =
@@ -17,11 +26,31 @@ function getGIF() {
         // let addGif = document.innerHTML= '<img src =  "'+ gifAttach +'" title="GIF">';
         let addGif = document.createElement("img");
         addGif.setAttribute("src", gifAttach);
-        formInfo.append(addGif);
+        gifSection.append(addGif);
       });
-    }
+    };
   });
-}
+};
+
+function formSubmission(){
+  formInfo.textContent = wishName.value.trim();
+  date.textContent = wishDate.value.trim();
+  comment.textContent = wishComment.value;  
+
+  formInfo.append(date);
+  // date.append(comment); 
+
+  return;
+};
+
+
+
+//event listeners:
 gif.addEventListener("click", function () {
   getGIF();
+});
+
+submitBtn.addEventListener("click",function(event){
+  event.preventDefault();
+  formSubmission()
 });
