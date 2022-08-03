@@ -125,6 +125,9 @@ textarea {
   display: flex;
 }
 
+.card-result-img:hover {
+  transform: scale(2.5);
+}
 .form-values {
   display: flex;
   justify-content: space-between;
@@ -132,5 +135,5 @@ textarea {
 
 .gifClass {
   width: 300px;
-  height:auto;
+  height: auto;
 }
