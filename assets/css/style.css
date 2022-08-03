@@ -114,7 +114,6 @@ textarea {
   color: white;
 }
 
-<<<<<<< HEAD
 /* STYLE FOR WISHLIST.HTML PAGE*/
 .wishlist {
   display: flex;
@@ -122,13 +121,7 @@ textarea {
   color: #f27c38;
 }
 
-.container {
-  display: flexbox;
-  flex-wrap: wrap;
-}
-=======
 .form-values {
   display: flex;
   justify-content: space-between;
 }
->>>>>>> main

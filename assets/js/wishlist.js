@@ -11,10 +11,8 @@ let wishComment = document.querySelector(".comment");
 let submitBtn = document.querySelector(".send");
 let date = document.createElement("p");
 // let comment = document.createElement("p");
-let gifSection =document.querySelector(".gif-section");
-let comment = document.querySelector(".comment-section")
-
-
+let gifSection = document.querySelector(".gif-section");
+let comment = document.querySelector(".comment-section");
 
 function getGIF() {
   let gifyAPI =
@@ -30,29 +28,26 @@ function getGIF() {
         addGif.setAttribute("src", gifAttach);
         gifSection.append(addGif);
       });
-    };
+    }
   });
-};
+}
 
-function formSubmission(){
+function formSubmission() {
   formInfo.textContent = wishName.value.trim();
   date.textContent = wishDate.value.trim();
-  comment.textContent = wishComment.value;  
+  comment.textContent = wishComment.value;
 
   formInfo.append(date);
-  // date.append(comment); 
+  // date.append(comment);
 
   return;
-};
-
-
+}
 
 //event listeners:
 gif.addEventListener("click", function () {
   getGIF();
 });
 
-<<<<<<< HEAD
 // displaying cards on wishlist
 
 function displayCards() {
@@ -60,9 +55,8 @@ function displayCards() {
 }
 
 displayCards();
-=======
-submitBtn.addEventListener("click",function(event){
+
+submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  formSubmission()
+  formSubmission();
 });
->>>>>>> main
