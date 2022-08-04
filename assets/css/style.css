@@ -177,4 +177,7 @@ textarea {
   header {
     flex-direction: column;
   }
+  .random-tweet-cont {
+    flex-direction: column;
+  }
 }

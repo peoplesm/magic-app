@@ -57,7 +57,7 @@ function setRandomCards() {
       picImg.classList.add("card");
       picImg.classList.add("2xm");
       picImg.classList.add("border-black");
-      picImg.setAttribute("style", "border-radius: 25px");
+      picImg.setAttribute("style", "border-radius: 25px; max-width:100%");
     }
   }
 }
