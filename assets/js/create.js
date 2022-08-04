@@ -25,7 +25,15 @@ function searchCard(searchInput) {
           for (let i = 0; i < data.data.length; i++) {
             let cardImg = document.createElement("img");
             resultsEl.append(cardImg);
-            cardImg.setAttribute("src", data.data[i].image_uris.normal);
+            if (!data.data[i].image_uris) {
+              cardImg.setAttribute(
+                "src",
+                data.data[i].card_faces[0].image_uris.normal
+              );
+            } else {
+              cardImg.setAttribute("src", data.data[i].image_uris.normal);
+            }
+
             cardImg.setAttribute(
               "style",
               "width: 150px; border-radius: 10px; z-index: 5"
