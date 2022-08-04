@@ -63,9 +63,7 @@ function handleCardClick(event) {
   let cardLi = document.createElement("li");
   recentAddEl.append(cardLi);
   cardLi.textContent = cardName;
-  cardLi.classList.add("list-group-item");
-  cardLi.classList.add("card-li");
-  cardLi.classList.add("user-select-none");
+  cardLi.classList.add("list-group-item", "card-li", "user-select-none");
   cardLi.setAttribute("data-mdb-toggle", "tooltip");
   cardLi.setAttribute("title", "Double Click to Remove");
   cardLi.addEventListener("dblclick", removeLi);
