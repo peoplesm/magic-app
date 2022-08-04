@@ -122,16 +122,6 @@ textarea {
   font-weight: bolder;
 }
 
-.search-input {
-  display: flex;
-}
-
-.card-result-img:hover {
-  position: relative;
-  z-index: 5;
-  transform: scale(2.5);
-  cursor: pointer;
-}
 .form-values {
   display: flex;
   justify-content: space-between;
@@ -143,6 +133,24 @@ textarea {
 }
 
 /* Create.html styles */
+.search-input {
+  display: flex;
+  position: sticky;
+  top: 15px;
+}
+
+.card-result-img:hover {
+  position: relative;
+  z-index: 5;
+  transform: scale(2.5);
+  cursor: pointer;
+}
+
+.recently-added-cont {
+  position: sticky;
+  top: 10px;
+}
+
 .card-li {
   background-color: black;
   color: white;
