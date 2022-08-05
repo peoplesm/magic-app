@@ -123,18 +123,10 @@ textarea {
   font-weight: bolder;
 }
 
-.form-values {
-  display: flex;
-  justify-content: space-between;
-}
-
-.gifClass {
-  width: 300px;
-  height: auto;
-}
 /* wishlist.html styles */
 .wish-main {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .input-background {
@@ -143,6 +135,23 @@ textarea {
 
 .container-cards {
   padding: auto;
+  margin-top: 10px;
+}
+
+.form-values {
+  display: flex;
+  justify-content: space-around;
+  font-size: 150%;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.336);
+  border: white 2px solid;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.gifClass {
+  width: 300px;
+  height: auto;
 }
 
 /* Create.html styles */
@@ -186,12 +195,15 @@ textarea {
   margin-bottom: 5px;
 }
 
+.clear-list {
+  padding: 5px;
+}
+
 #cards-id img {
   width: 200px;
   height: auto;
   border-radius: 10px;
 }
-
 
 /* Media Screens */
 @media (max-width: 775px) {
@@ -199,6 +211,12 @@ textarea {
     flex-direction: column;
   }
   .random-tweet-cont {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form-values {
     flex-direction: column;
   }
 }

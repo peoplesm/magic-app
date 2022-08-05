@@ -4,6 +4,7 @@ let resultsEl = document.querySelector(".search-results");
 let recentAddEl = document.querySelector(".recently-added");
 let saveListBtn = document.querySelector(".save-list");
 let nameListBtn = document.querySelector(".name-list");
+let clearListBtn = document.querySelector(".clear-list");
 
 function handleInput(event) {
   event.preventDefault();
@@ -60,14 +61,29 @@ function handleCardClick(event) {
     cardImg: cardImg,
   };
   savedCardArr.push(cardObj);
+  let i = savedCardArr.indexOf(cardObj);
+  recentAddEl.append(buildCard(i));
+
+  console.log(cardObj);
+  console.log(savedCardArr);
+}
+
+function buildCard(i) {
   let cardLi = document.createElement("li");
-  recentAddEl.append(cardLi);
-  cardLi.textContent = cardName;
+  cardLi.textContent = savedCardArr[i].cardName;
   cardLi.classList.add("list-group-item", "card-li", "user-select-none");
   cardLi.setAttribute("data-mdb-toggle", "tooltip");
   cardLi.setAttribute("title", "Double Click to Remove");
   cardLi.addEventListener("dblclick", removeLi);
-  console.log(savedCardArr);
+  return cardLi;
+}
+
+function buildList() {
+  savedCardArr = JSON.parse(localStorage.getItem("deck"));
+  for (let i = 0; i < savedCardArr.length; i++) {
+    let cardLi = buildCard(i);
+    recentAddEl.append(cardLi);
+  }
 }
 
 function removeLi(event) {
@@ -94,6 +110,24 @@ function handleName() {
   location.href = "./wishlist.html";
 }
 
+function handleClear() {
+  while (recentAddEl.firstChild) {
+    recentAddEl.removeChild(recentAddEl.firstChild);
+  }
+  savedCardArr = [];
+  localStorage.setItem("deck", JSON.stringify(savedCardArr));
+  console.log(savedCardArr);
+}
+
 searchBtn.addEventListener("click", handleInput);
 saveListBtn.addEventListener("click", handleSave);
 nameListBtn.addEventListener("click", handleName);
+clearListBtn.addEventListener("click", handleClear);
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    if (localStorage.getItem("deck")) {
+      buildList();
+    }
+  }
+};
