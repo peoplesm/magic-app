@@ -1,4 +1,5 @@
-let cardWishlist = document.querySelector(".container");
+let arrCardWishlist = [];
+let cardWishlistEl = document.getElementById("cards-id");
 
 let gifyURL =
   "https://api.giphy.com/v1/gifs/search?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&q=";
@@ -50,14 +51,20 @@ gif.addEventListener("click", function () {
 });
 
 // displaying cards on wishlist
-
-// function displayCards() {
-//   cardWishlist.innerHTML = localStorage.getItem("placeholder-value");
-// }
-
-// displayCards();
+function displayCardz() {
+  arrCardWishlist = JSON.parse(localStorage.getItem("deck"));
+  console.log(arrCardWishlist);
+  for (let index = 0; index < arrCardWishlist.length; index++) {
+    var cardImage = arrCardWishlist[index].cardImg;
+    var cardImageEl = document.createElement("img");
+    cardImageEl.setAttribute("src", cardImage);
+    cardWishlistEl.append(cardImageEl);
+  }
+}
 
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
   formSubmission();
 });
+
+displayCardz();

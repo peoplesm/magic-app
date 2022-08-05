@@ -159,3 +159,9 @@ textarea {
   border: white solid 1px;
   margin-bottom: 5px;
 }
+
+#cards-id img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
