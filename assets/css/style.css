@@ -173,13 +173,15 @@ textarea {
   margin-bottom: 5px;
 }
 
-
+/* Wishlist.html styles */
 #cards-id img {
   width: 200px;
   height: auto;
   border-radius: 10px;
 }
 
+
+/* Media Screens */
 @media (max-width: 775px) {
   header {
     flex-direction: column;
