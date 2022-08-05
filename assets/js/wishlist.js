@@ -37,6 +37,10 @@ function getGIF(deckObject) {
 }
 
 function formSubmission() {
+  if (localStorage.getItem("form")) {
+    formArr = [];
+  }
+  gifSection.innerHTML = "";
   deck = {
     formName: wishName.value.trim(),
     formDate: wishDate.value.trim(),
@@ -65,9 +69,9 @@ function displayCardz() {
 
 function renderForm() {
   console.log(formArr);
-  listName.textContent = formArr[0].formName;
-  comment.textContent = formArr[0].formComment;
-  date.textContent = formArr[0].formDate;
+  listName.innerHTML = `Deck Name: <br>${formArr[0].formName}`;
+  comment.innerHTML = `Comment: <br>${formArr[0].formComment}`;
+  date.innerHTML = `Date: <br>${formArr[0].formDate}`;
 
   formInfo.append(listName);
   formInfo.append(date);
