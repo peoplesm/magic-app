@@ -173,6 +173,13 @@ textarea {
   margin-bottom: 5px;
 }
 
+
+#cards-id img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
 @media (max-width: 775px) {
   header {
     flex-direction: column;
@@ -181,3 +188,4 @@ textarea {
     flex-direction: column;
   }
 }
+
