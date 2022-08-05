@@ -132,8 +132,16 @@ textarea {
   height: auto;
 }
 /* wishlist.html styles */
+.wish-main {
+  padding-top: 10px;
+}
+
 .input-background {
   background-color: rgba(0, 0, 0, 0.336);
+}
+
+.container-cards {
+  padding: auto;
 }
 
 /* Create.html styles */
