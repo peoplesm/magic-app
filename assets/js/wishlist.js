@@ -41,15 +41,19 @@ function formSubmission() {
     formArr = [];
   }
   gifSection.innerHTML = "";
+  listName.innerHTML = "";
+  comment.innerHTML = "";
+  date.innerHTML = "";
   deck = {
     formName: wishName.value.trim(),
     formDate: wishDate.value.trim(),
     formComment: wishComment.value,
   };
   getGIF(deck);
-  listName.innerHTML = `Deck Name: <br>${formArr[0].formName}`;
-  comment.innerHTML = `Comment: <br>${formArr[0].formComment}`;
-  date.innerHTML = `Date: <br>${formArr[0].formDate}`;
+  console.log(deck);
+  listName.innerHTML = `Deck Name: <br>${deck.formName}`;
+  comment.innerHTML = `Comment: <br>${deck.formComment}`;
+  date.innerHTML = `Date: <br>${deck.formDate}`;
 
   formInfo.append(listName);
   formInfo.append(date);
