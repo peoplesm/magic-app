@@ -14,6 +14,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome for Scalable Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Wishlist</title>
   </head>
@@ -42,49 +47,66 @@
         </ul>
       </nav>
     </header>
-    <!-- form info //gif // wishlist should append here -->
-    <section class="form-values">
-      <div class="name-date"></div>
-      <div class="comment-section"></div>
-      <div class="gif-section"></div>
-    </section>
 
-    <!-- containers with three columns each to place the cards image and stats-->
-    <div class="container-cards" id="cards-id"></div>
+    <main class="container">
+      <!-- form info //gif // wishlist should append here -->
+      <section class="form-values">
+        <div class="name-date"></div>
+        <div class="comment-section"></div>
+        <div class="gif-section"></div>
+      </section>
 
-    <form>
-      <!-- Name input -->
-      <div class="form-outline mb-4">
-        <input type="text" id="form4Example1" class="form-control name" />
-        <label class="form-label" for="form4Example1">Wishlist Name</label>
-      </div>
-      <!-- Date input -->
-      <div class="form-outline mb-4">
-        <input type="date" id="form4Example2" class="form-control date" />
-        <label class="form-label" for="form4Example2">Date</label>
-      </div>
-      <!-- Message input -->
-      <div class="form-outline mb-4">
-        <textarea
-          class="form-control comment"
-          id="form4Example3"
-          rows="4"
-        ></textarea>
-        <label class="form-label" for="form4Example3">Comment</label>
-      </div>
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-primary btn-block send">Send</button>
-    </form>
-    <div class="input-group">
-      <div class="form-outline">
-        <input type="search" id="form1" class="form-control gif-search" />
-        <label class="form-label" for="form1">GIF Search</label>
-      </div>
-      <button type="button" class="btn btn-primary gif">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
-
+      <!-- containers with three columns each to place the cards image and stats-->
+      <div class="container-cards" id="cards-id"></div>
+      <br />
+      <form>
+        <!-- Name input -->
+        <div class="form-outline mb-4 input-background">
+          <input type="text" id="form4Example1" class="form-control name" />
+          <label class="form-label" for="form4Example1" style="color: white"
+            >Wishlist Name</label
+          >
+        </div>
+        <!-- Date input -->
+        <div class="form-outline mb-4 input-background">
+          <input type="date" id="form4Example2" class="form-control date" />
+          <label class="form-label" for="form4Example2" style="color: white"
+            >Date</label
+          >
+        </div>
+        <!-- Message input -->
+        <div class="form-outline mb-4 input-background">
+          <textarea
+            class="form-control comment"
+            id="form4Example3"
+            rows="4"
+          ></textarea>
+          <label class="form-label" for="form4Example3" style="color: white"
+            >Comment</label
+          >
+        </div>
+        <div class="input-group">
+          <div class="form-outline input-background">
+            <input type="search" id="form1" class="form-control gif-search" />
+            <label class="form-label" for="form1" style="color: white"
+              >GIF Search</label
+            >
+          </div>
+          <button type="button" class="btn btn-black gif">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <br />
+        <!-- Submit button -->
+        <button
+          type="submit"
+          class="btn btn-black btn-block send"
+          style="color: white"
+        >
+          Send
+        </button>
+      </form>
+    </main>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
