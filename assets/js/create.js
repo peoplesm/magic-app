@@ -125,9 +125,9 @@ nameListBtn.addEventListener("click", handleName);
 clearListBtn.addEventListener("click", handleClear);
 
 document.onreadystatechange = function () {
-  document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
     if (localStorage.getItem("deck")) {
       buildList();
     }
-  };
+  }
 };
