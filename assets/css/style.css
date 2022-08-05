@@ -183,6 +183,8 @@ textarea {
   border-radius: 10px;
 }
 
+
+/* Media Screens */
 @media (max-width: 775px) {
   header {
     flex-direction: column;
