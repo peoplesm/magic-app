@@ -25,7 +25,15 @@ function searchCard(searchInput) {
           for (let i = 0; i < data.data.length; i++) {
             let cardImg = document.createElement("img");
             resultsEl.append(cardImg);
-            cardImg.setAttribute("src", data.data[i].image_uris.normal);
+            if (!data.data[i].image_uris) {
+              cardImg.setAttribute(
+                "src",
+                data.data[i].card_faces[0].image_uris.normal
+              );
+            } else {
+              cardImg.setAttribute("src", data.data[i].image_uris.normal);
+            }
+
             cardImg.setAttribute(
               "style",
               "width: 150px; border-radius: 10px; z-index: 5"
@@ -55,9 +63,7 @@ function handleCardClick(event) {
   let cardLi = document.createElement("li");
   recentAddEl.append(cardLi);
   cardLi.textContent = cardName;
-  cardLi.classList.add("list-group-item");
-  cardLi.classList.add("card-li");
-  cardLi.classList.add("user-select-none");
+  cardLi.classList.add("list-group-item", "card-li", "user-select-none");
   cardLi.setAttribute("data-mdb-toggle", "tooltip");
   cardLi.setAttribute("title", "Double Click to Remove");
   cardLi.addEventListener("dblclick", removeLi);

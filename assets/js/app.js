@@ -19,7 +19,11 @@ function populateRandomCards() {
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
-          randomCardArr.push(data.image_uris.normal);
+          if (!data.image_uris) {
+            randomCardArr.push(data.card_faces[0].image_uris.normal);
+          } else {
+            randomCardArr.push(data.image_uris.normal);
+          }
           i++;
           if (i > 4) {
             setRandomCards();
@@ -53,7 +57,7 @@ function setRandomCards() {
       picImg.classList.add("card");
       picImg.classList.add("2xm");
       picImg.classList.add("border-black");
-      picImg.setAttribute("style", "border-radius: 25px");
+      picImg.setAttribute("style", "border-radius: 25px; max-width:100%");
     }
   }
 }

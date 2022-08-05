@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +16,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome for Scalable Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Our stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Magic App</title>
   </head>
@@ -45,39 +54,47 @@
     </header>
     <main class="container">
       <div class="row p-2">
-        <div class="col-3">
+        <div class="col-4 col-xl-3">
           <form class="form-outline search-input">
             <input type="text" id="form12" class="form-control searchInput" />
             <label class="form-label" for="form12" style="color: white"
               >Card Name</label
-            ><button class="btn btn-black search" type="submit">Search</button>
+            ><button class="btn btn-black search" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
           </form>
         </div>
-        <div class="col-6">
-          Results
+        <div class="col-6 col-xl-6 text-center">
+          Results:
 
           <div class="search-results"></div>
         </div>
-        <div class="col-3 text-center">
-          Recently Added
-          <br />
-          <button class="btn btn-black recent-btns save-list" type="button">
-            Save List
-          </button>
-          <a href="./wishlist.html"
-            ><button class="btn btn-black recent-btns name-list" type="button">
-              Name List
-            </button></a
-          >
-          <ul class="list-group recently-added"></ul>
+        <div class="col-2 col-xl-3 text-center">
+          <section class="recently-added-cont">
+            Recently Added
+            <br />
+            <button class="btn btn-black recent-btns save-list" type="button">
+              Save List
+            </button>
+            <a href="./wishlist.html"
+              ><button
+                class="btn btn-black recent-btns name-list"
+                type="button"
+              >
+                Name List
+              </button></a
+            >
+            <ul class="list-group recently-added"></ul>
+          </section>
         </div>
       </div>
     </main>
-
+    <!-- MDB script -->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
     ></script>
+    <!-- Our Script -->
     <script src="./assets/js/create.js"></script>
   </body>
 </html>
