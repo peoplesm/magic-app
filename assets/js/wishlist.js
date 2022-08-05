@@ -12,7 +12,6 @@ let wishDate = document.querySelector(".date");
 let wishComment = document.querySelector(".comment");
 let submitBtn = document.querySelector(".send");
 let date = document.createElement("p");
-// let comment = document.createElement("p");
 let gifSection = document.querySelector(".gif-section");
 let comment = document.createElement("p");
 let listName = document.createElement("p");
@@ -26,16 +25,12 @@ function getGIF(deckObject) {
         console.log(response);
         let gifAttach = data.data[0].images.original.url;
         deckObject.formGif = gifAttach;
-        arrCardWishlist.unshift(deckObject);
-
-        localStorage.setItem("deck", JSON.stringify(arrCardWishlist));
-
-        // let addGif = document.innerHTML= '<img src =  "'+ gifAttach +'" title="GIF">';
+        formArr.push(deckObject);
+        localStorage.setItem("form", JSON.stringify(formArr));
         let addGif = document.createElement("img");
         addGif.setAttribute("src", gifAttach);
         addGif.classList.add("gifClass");
         gifSection.append(addGif);
-        return gifAttach;
       });
     }
   }); //add a catch or an empty string formGif
@@ -46,10 +41,8 @@ function formSubmission() {
     formName: wishName.value.trim(),
     formDate: wishDate.value.trim(),
     formComment: wishComment.value,
-    // formGif: getGIF(),
   };
   getGIF(deck);
-  JSON.parse(localStorage.getItem("deck"));
   listName.textContent = deck.formName;
   comment.textContent = deck.formComment;
   date.textContent = deck.formDate;
@@ -57,14 +50,7 @@ function formSubmission() {
   formInfo.append(listName);
   formInfo.append(date);
   formInfo.append(comment);
-
-  return;
 }
-
-//event listeners:
-// gif.addEventListener("click", function () {
-
-// });
 
 // displaying cards on wishlist
 function displayCardz() {
@@ -77,17 +63,36 @@ function displayCardz() {
   }
 }
 
+function renderForm() {
+  console.log(formArr);
+  listName.textContent = formArr[0].formName;
+  comment.textContent = formArr[0].formComment;
+  date.textContent = formArr[0].formDate;
+
+  formInfo.append(listName);
+  formInfo.append(date);
+  formInfo.append(comment);
+  let addGif = document.createElement("img");
+  addGif.setAttribute("src", formArr[0].formGif);
+  addGif.classList.add("gifClass");
+  gifSection.append(addGif);
+}
+
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
   formSubmission();
-  // getGIF();
 });
 
 document.onreadystatechange = function () {
   document.onreadystatechange = function () {
     if (localStorage.getItem("deck")) {
       arrCardWishlist = JSON.parse(localStorage.getItem("deck"));
+      // put an else here that pops a modole thing saying to go create a deck
       displayCardz();
+    }
+    if (localStorage.getItem("form")) {
+      formArr = JSON.parse(localStorage.getItem("form"));
+      renderForm();
     }
   };
 };
