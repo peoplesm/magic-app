@@ -88,7 +88,7 @@ submitBtn.addEventListener("click", function (event) {
 });
 
 document.onreadystatechange = function () {
-  document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
     if (localStorage.getItem("deck")) {
       arrCardWishlist = JSON.parse(localStorage.getItem("deck"));
       // put an else here that pops a modole thing saying to go create a deck
@@ -98,5 +98,5 @@ document.onreadystatechange = function () {
       formArr = JSON.parse(localStorage.getItem("form"));
       renderForm();
     }
-  };
+  }
 };
