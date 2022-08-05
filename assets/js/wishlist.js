@@ -47,9 +47,9 @@ function formSubmission() {
     formComment: wishComment.value,
   };
   getGIF(deck);
-  listName.textContent = deck.formName;
-  comment.textContent = deck.formComment;
-  date.textContent = deck.formDate;
+  listName.innerHTML = `Deck Name: <br>${formArr[0].formName}`;
+  comment.innerHTML = `Comment: <br>${formArr[0].formComment}`;
+  date.innerHTML = `Date: <br>${formArr[0].formDate}`;
 
   formInfo.append(listName);
   formInfo.append(date);
