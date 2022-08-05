@@ -108,6 +108,7 @@ nav button:hover a {
 .form-control:focus {
   box-shadow: none;
   color: white;
+  background-color: transparent;
 }
 
 textarea {
