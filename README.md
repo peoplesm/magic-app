@@ -26,5 +26,5 @@ GIVEN a Magic the Gathering search platform
 
 [Deployed Site](placeholder)
 
-Wireframe guidelines for this project
-<img src="placeholder.img" alt="placeholder screenshot" />
+Home Page for our Website
+<img src="./assets/images/screenshot.png" alt="magic the gathering home page" />
