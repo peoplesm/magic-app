@@ -62,14 +62,6 @@ function handleCardClick(event) {
   };
   savedCardArr.push(cardObj);
   let i = savedCardArr.indexOf(cardObj);
-
-  // let cardLi = document.createElement("li");
-  // recentAddEl.append(cardLi);
-  // cardLi.textContent = cardName;
-  // cardLi.classList.add("list-group-item", "card-li", "user-select-none");
-  // cardLi.setAttribute("data-mdb-toggle", "tooltip");
-  // cardLi.setAttribute("title", "Double Click to Remove");
-  // cardLi.addEventListener("dblclick", removeLi);
   recentAddEl.append(buildCard(i));
 
   console.log(cardObj);
