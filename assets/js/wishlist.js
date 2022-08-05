@@ -1,11 +1,12 @@
 let arrCardWishlist = [];
 let cardWishlistEl = document.getElementById("cards-id");
+let formArr =[];
 
 let gifyURL =
   "https://api.giphy.com/v1/gifs/search?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&q=";
 let gifSearch = document.querySelector(".gif-search");
 let gif = document.querySelector(".gif");
-let formInfo = document.querySelector(".name-date");
+let formInfo = document.querySelector(".form-values");
 let wishName = document.querySelector(".name");
 let wishDate = document.querySelector(".date");
 let wishComment = document.querySelector(".comment");
@@ -13,7 +14,8 @@ let submitBtn = document.querySelector(".send");
 let date = document.createElement("p");
 // let comment = document.createElement("p");
 let gifSection = document.querySelector(".gif-section");
-let comment = document.querySelector(".comment-section");
+let comment = document.createElement("p");
+let listName = document.createElement("p");
 
 function getGIF() {
   let gifyAPI =
@@ -35,20 +37,39 @@ function getGIF() {
 }
 
 function formSubmission() {
-  formInfo.textContent = wishName.value.trim();
-  date.textContent = wishDate.value.trim();
-  comment.textContent = wishComment.value;
+  deckObject= {
+    formName: wishName.value.trim(),
+    formDate: wishDate.value.trim(),
+    formComment: wishComment.value,
+    formGif: getGIF(),
+    cards: displayCardz()
+  };
+  // formInfo.textContent = wishName.value.trim();
+  // date.textContent = wishDate.value.trim();
+  // comment.textContent = wishComment.value;
 
-  formInfo.append(date);
+  // formInfo.append(date);
   // date.append(comment);
+  localStorage.setItem("form-info", JSON.stringify(deckObject));
+
+  JSON.parse(localStorage.getItem("form-info"));
+  listName.textContent = deckObject.formName;
+  comment.textContent = deckObject.formComment;
+  date.textContent = deckObject.formDate;
+
+  formInfo.append(listName);
+  formInfo.append(date);
+  formInfo.append(comment)
+  
+
 
   return;
 }
 
 //event listeners:
-gif.addEventListener("click", function () {
-  getGIF();
-});
+// gif.addEventListener("click", function () {
+ 
+// });
 
 // displaying cards on wishlist
 function displayCardz() {
@@ -65,6 +86,8 @@ function displayCardz() {
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
   formSubmission();
+  // displayCardz();
+  // getGIF();
 });
 
-displayCardz();
+
