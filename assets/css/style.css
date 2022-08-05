@@ -195,6 +195,10 @@ textarea {
   margin-bottom: 5px;
 }
 
+.clear-list {
+  padding: 5px;
+}
+
 #cards-id img {
   width: 200px;
   height: auto;
