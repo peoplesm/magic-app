@@ -131,6 +131,10 @@ textarea {
   width: 300px;
   height: auto;
 }
+/* wishlist.html styles */
+.input-background {
+  background-color: rgba(0, 0, 0, 0.336);
+}
 
 /* Create.html styles */
 .search-input {
@@ -173,7 +177,6 @@ textarea {
   margin-bottom: 5px;
 }
 
-/* Wishlist.html styles */
 #cards-id img {
   width: 200px;
   height: auto;
@@ -190,4 +193,3 @@ textarea {
     flex-direction: column;
   }
 }
-
