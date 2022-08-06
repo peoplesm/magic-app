@@ -1,7 +1,7 @@
+//Variables
 let arrCardWishlist = [];
 let cardWishlistEl = document.getElementById("cards-id");
 let formArr = [];
-
 let gifyURL =
   "https://api.giphy.com/v1/gifs/search?api_key=nP9BkrRS5LsHhVROKIrah4GzQ3R1k7PV&q=";
 let gifSearch = document.querySelector(".gif-search");
@@ -16,6 +16,7 @@ let gifSection = document.querySelector(".gif-section");
 let comment = document.createElement("p");
 let listName = document.createElement("p");
 
+//API call to gify when user inputs deck form
 function getGIF(deckObject) {
   let gifyAPI =
     gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
@@ -36,6 +37,7 @@ function getGIF(deckObject) {
   }); //add a catch or an empty string formGif
 }
 
+//Fxn that builds the array from the form inputed by user
 function formSubmission() {
   if (localStorage.getItem("form")) {
     formArr = [];
@@ -49,8 +51,10 @@ function formSubmission() {
     formDate: wishDate.value.trim(),
     formComment: wishComment.value,
   };
+  //Sends above object to the api call fxn
   getGIF(deck);
   console.log(deck);
+  //Fills in the deck info based on the user input
   listName.innerHTML = `Deck Name: <br>${deck.formName}`;
   comment.innerHTML = `Comment: <br>${deck.formComment}`;
   date.innerHTML = `Date: <br>${deck.formDate}`;
@@ -71,6 +75,7 @@ function displayCardz() {
   }
 }
 
+//Pulls form data from the form array and displays it
 function renderForm() {
   console.log(formArr);
   listName.innerHTML = `Deck Name: <br>${formArr[0].formName}`;
@@ -86,18 +91,22 @@ function renderForm() {
   gifSection.append(addGif);
 }
 
+//save event calls formSubmission fxn
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
   formSubmission();
 });
 
+//Start the page
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
+    //Checks to see if the user saved a deck on the create page to display said deck
     if (localStorage.getItem("deck")) {
       arrCardWishlist = JSON.parse(localStorage.getItem("deck"));
       // put an else here that pops a modole thing saying to go create a deck
       displayCardz();
     }
+    //Checks to see if there is already a form saved to localStorage to fill the formArr & render it
     if (localStorage.getItem("form")) {
       formArr = JSON.parse(localStorage.getItem("form"));
       renderForm();

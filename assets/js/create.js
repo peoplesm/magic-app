@@ -1,3 +1,4 @@
+//Variables
 let searchInputEl = document.querySelector(".searchInput");
 let searchBtn = document.querySelector(".search");
 let resultsEl = document.querySelector(".search-results");
@@ -6,6 +7,7 @@ let saveListBtn = document.querySelector(".save-list");
 let nameListBtn = document.querySelector(".name-list");
 let clearListBtn = document.querySelector(".clear-list");
 
+//Function called when user clicks search
 function handleInput(event) {
   event.preventDefault();
   let searchInput = searchInputEl.value;
@@ -15,6 +17,7 @@ function handleInput(event) {
   searchInputEl.value = "";
 }
 
+//API call based on user's input. Initiated by the handleInput fxn
 function searchCard(searchInput) {
   let apiUrl = `https://api.scryfall.com/cards/search?q=${searchInput}`;
   fetch(apiUrl).then(function (response) {
@@ -23,6 +26,7 @@ function searchCard(searchInput) {
         .json()
         .then(function (data) {
           console.log(data);
+          //Logic for listing the card images that get returned.
           for (let i = 0; i < data.data.length; i++) {
             let cardImg = document.createElement("img");
             resultsEl.append(cardImg);
@@ -51,6 +55,7 @@ function searchCard(searchInput) {
   });
 }
 
+//Building the deck based on user clicks on the generated card list.
 let savedCardArr = [];
 function handleCardClick(event) {
   console.log(event);
@@ -68,6 +73,7 @@ function handleCardClick(event) {
   console.log(savedCardArr);
 }
 
+//Make the individual card li
 function buildCard(i) {
   let cardLi = document.createElement("li");
   cardLi.textContent = savedCardArr[i].cardName;
@@ -78,6 +84,7 @@ function buildCard(i) {
   return cardLi;
 }
 
+//Rendering last known list from localStorage
 function buildList() {
   savedCardArr = JSON.parse(localStorage.getItem("deck"));
   for (let i = 0; i < savedCardArr.length; i++) {
@@ -86,6 +93,7 @@ function buildList() {
   }
 }
 
+//Finds corresponding card in array based on user dblclick
 function removeLi(event) {
   console.log(event);
   let cardLi = event.target;
@@ -101,15 +109,18 @@ function removeLi(event) {
   console.log(savedCardArr);
 }
 
+//Save deck to localStorage
 function handleSave() {
   localStorage.setItem("deck", JSON.stringify(savedCardArr));
 }
 
+//Saves deck and goes to wishlist page when name btn is clicked
 function handleName() {
   handleSave();
   location.href = "./wishlist.html";
 }
 
+//Clears the current saved deck
 function handleClear() {
   while (recentAddEl.firstChild) {
     recentAddEl.removeChild(recentAddEl.firstChild);
@@ -124,6 +135,7 @@ saveListBtn.addEventListener("click", handleSave);
 nameListBtn.addEventListener("click", handleName);
 clearListBtn.addEventListener("click", handleClear);
 
+//Start the page
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     if (localStorage.getItem("deck")) {
