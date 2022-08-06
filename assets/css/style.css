@@ -1,25 +1,9 @@
-/* .slider {
-  width: 100%;
-  max-width: 800px;
-  height: 350px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-} */
-
+/* INDEX HTML */
 body {
   background-image: url(../../assets/images/dark-denim.jpg);
   background-repeat: repeat;
   color: white;
   font-family: "Eagle Lake", cursive;
-}
-
-.nav-ul {
-  list-style-type: none;
-}
-
-.nav-ul.li {
-  display: inline;
 }
 
 header {
@@ -54,24 +38,6 @@ nav {
   margin: 20px;
 }
 
-.image-logo {
-  display: flex;
-  justify-content: baseline;
-}
-
-h1 {
-  color: #f27c38;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  text-shadow: 4px 2px 2px #140905;
-  padding: 10px 20px;
-}
-
-.headlogo {
-  height: 175px;
-  width: auto;
-}
-
 nav button {
   background-color: black;
   font-size: 20px;
@@ -93,6 +59,32 @@ nav button:active {
   background-color: #f27c38;
 }
 
+.nav-ul {
+  list-style-type: none;
+}
+
+h1 {
+  color: #f27c38;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 4px 2px 2px #140905;
+  padding: 10px 20px;
+}
+
+.nav-ul.li {
+  display: inline;
+}
+
+.image-logo {
+  display: flex;
+  justify-content: baseline;
+}
+
+.headlogo {
+  height: 175px;
+  width: auto;
+}
+
 .btn:hover {
   background-color: white;
   color: black;
@@ -102,7 +94,13 @@ nav button:active {
   margin: auto;
 }
 
-/* Color of form input boxes */
+/* Wishlist HTML */
+  /* Color of form input boxes */
+textarea {
+    animation-name: none;
+    visibility: visible;
+}
+
 .form-control {
   color: white;
   font-family: monospace;
@@ -115,11 +113,6 @@ nav button:active {
   background-color: transparent;
 }
 
-textarea {
-  animation-name: none;
-  visibility: visible;
-}
-
 .sub-page {
   display: flex;
   justify-content: center;
@@ -127,7 +120,7 @@ textarea {
   font-weight: bolder;
 }
 
-/* wishlist.html styles */
+  /* wishlist.html styles */
 .wish-main {
   padding-top: 10px;
   padding-bottom: 10px;
