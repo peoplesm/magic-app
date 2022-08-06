@@ -39,6 +39,7 @@ function getGIF(deckObject) {
 
 //Fxn that builds the array from the form inputed by user
 function formSubmission() {
+  formInfo.setAttribute("style", "display");
   if (localStorage.getItem("form")) {
     formArr = [];
   }
@@ -110,6 +111,8 @@ document.onreadystatechange = function () {
     if (localStorage.getItem("form")) {
       formArr = JSON.parse(localStorage.getItem("form"));
       renderForm();
+    } else {
+      formInfo.setAttribute("style", "display: none");
     }
   }
 };
