@@ -28,3 +28,5 @@ GIVEN a Magic the Gathering search platform
 
 Home Page for our Website
 <img src="./assets/images/screenshot.png" alt="magic the gathering home page" />
+
+<img src="./assets/images/run-through.gif" alt="mtg gif"/>
