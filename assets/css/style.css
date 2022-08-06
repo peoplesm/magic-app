@@ -89,6 +89,10 @@ nav button:hover a {
   color: black;
 }
 
+nav button:active {
+  background-color: #f27c38;
+}
+
 .btn:hover {
   background-color: white;
   color: black;
