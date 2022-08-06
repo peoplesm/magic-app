@@ -126,6 +126,9 @@ function handleClear() {
     recentAddEl.removeChild(recentAddEl.firstChild);
   }
   savedCardArr = [];
+  formArr = [];
+  
+  localStorage.setItem("form", JSON.stringify(formArr));
   localStorage.setItem("deck", JSON.stringify(savedCardArr));
   console.log(savedCardArr);
 }
