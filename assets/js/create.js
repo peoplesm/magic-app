@@ -6,6 +6,7 @@ let recentAddEl = document.querySelector(".recently-added");
 let saveListBtn = document.querySelector(".save-list");
 let nameListBtn = document.querySelector(".name-list");
 let clearListBtn = document.querySelector(".clear-list");
+let savedCardArr = [];
 
 //Function called when user clicks search
 function handleInput(event) {
@@ -56,7 +57,6 @@ function searchCard(searchInput) {
 }
 
 //Building the deck based on user clicks on the generated card list.
-let savedCardArr = [];
 function handleCardClick(event) {
   console.log(event);
   let cardName = event.target.attributes["data-name"].nodeValue;
@@ -127,7 +127,7 @@ function handleClear() {
   }
   savedCardArr = [];
   formArr = [];
-  
+
   localStorage.setItem("form", JSON.stringify(formArr));
   localStorage.setItem("deck", JSON.stringify(savedCardArr));
   console.log(savedCardArr);
