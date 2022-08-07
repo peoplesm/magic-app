@@ -47,7 +47,7 @@ function formSubmission() {
   listName.innerHTML = "";
   comment.innerHTML = "";
   date.innerHTML = "";
-  deck = {
+  let deck = {
     formName: wishName.value.trim(),
     formDate: wishDate.value.trim(),
     formComment: wishComment.value,
@@ -82,7 +82,6 @@ function renderForm() {
   listName.innerHTML = `Deck Name: <br>${formArr[0].formName}`;
   comment.innerHTML = `Comment: <br>${formArr[0].formComment}`;
   date.innerHTML = `Date: <br>${formArr[0].formDate}`;
-
   formInfo.append(listName);
   formInfo.append(date);
   formInfo.append(comment);
@@ -110,9 +109,11 @@ document.onreadystatechange = function () {
     //Checks to see if there is already a form saved to localStorage to fill the formArr & render it
     if (localStorage.getItem("form")) {
       formArr = JSON.parse(localStorage.getItem("form"));
-      renderForm();
-    } else {
-      formInfo.setAttribute("style", "display: none");
+      if (formArr.length === 0) {
+        formInfo.setAttribute("style", "display: none");
+      } else {
+        renderForm();
+      }
     }
   }
 };
