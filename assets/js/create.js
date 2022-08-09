@@ -39,11 +39,6 @@ function searchCard(searchInput) {
             } else {
               cardImg.setAttribute("src", data.data[i].image_uris.normal);
             }
-
-            cardImg.setAttribute(
-              "style",
-              "width: 150px; border-radius: 10px; z-index: 5"
-            );
             cardImg.setAttribute("data-name", data.data[i].name);
             cardImg.setAttribute("data-price", data.data[i].prices.usd);
             cardImg.classList.add("card-result-img");

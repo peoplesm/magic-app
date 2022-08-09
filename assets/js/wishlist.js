@@ -72,7 +72,7 @@ function displayCardz() {
     let cardImage = arrCardWishlist[index].cardImg;
     let cardImageEl = document.createElement("img");
     cardImageEl.setAttribute("src", cardImage);
-    cardImageEl.classList.add("card-result-img")
+    cardImageEl.classList.add("card-result-img");
     cardWishlistEl.append(cardImageEl);
   }
 }
