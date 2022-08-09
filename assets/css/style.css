@@ -118,6 +118,7 @@ textarea {
   justify-content: center;
   color: #f27c38;
   font-weight: bolder;
+  font-size: 45px;
 }
 
   /* wishlist.html styles */
@@ -200,6 +201,13 @@ textarea {
   width: 200px;
   height: auto;
   border-radius: 10px;
+}
+
+footer {
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Media Screens */
