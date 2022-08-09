@@ -2,7 +2,7 @@
 let picBlock = document.querySelectorAll(".carousel-item");
 let picImg = document.createElement("img");
 
-//scryfall gets one random card
+//scryfall api call gets one random card
 let i = 0;
 let randomCardArr = [];
 function populateRandomCards() {
@@ -29,6 +29,7 @@ function populateRandomCards() {
         });
       }
     })
+    //If there is an error with the call, it pushes this array of images and sets the cards (ONLY THE COOLEST GO HERE! Change if you dare...)
     .catch((error) => {
       randomCardArr = [
         "https://static.cardkingdom.com/images/magic-the-gathering/secret-lair/xenagos-god-of-revels-foil-51493.jpg",
@@ -43,6 +44,7 @@ function populateRandomCards() {
     });
 }
 
+//Function to set the random cards choosen by the api call. Also used by the set array if the call errors.
 function setRandomCards() {
   console.log(randomCardArr);
   for (let i = 0; i < randomCardArr.length; i++) {
@@ -58,4 +60,9 @@ function setRandomCards() {
   }
 }
 
-populateRandomCards();
+//Start the page
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    populateRandomCards();
+  }
+};
