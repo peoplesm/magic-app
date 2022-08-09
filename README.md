@@ -1,4 +1,4 @@
-# magic-app
+# Magic App
 
 By Monica Yuh, Matt Peoples, and Levi Mendyk
 
