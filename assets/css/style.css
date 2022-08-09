@@ -4,6 +4,9 @@ body {
   background-repeat: repeat;
   color: white;
   font-family: "Eagle Lake", cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -95,10 +98,10 @@ h1 {
 }
 
 /* Wishlist HTML */
-  /* Color of form input boxes */
+/* Color of form input boxes */
 textarea {
-    animation-name: none;
-    visibility: visible;
+  animation-name: none;
+  visibility: visible;
 }
 
 .form-control {
@@ -121,7 +124,7 @@ textarea {
   font-size: 45px;
 }
 
-  /* wishlist.html styles */
+/* wishlist.html styles */
 .wish-main {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -208,6 +211,7 @@ footer {
   padding: 15px;
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 /* Media Screens */
