@@ -251,9 +251,6 @@ footer {
   .form-values {
     flex-direction: column;
   }
-  .card-li {
-    font-size: 50% !important;
-  }
 }
 
 @media (max-width: 1200px) {
