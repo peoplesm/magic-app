@@ -221,6 +221,12 @@ footer {
 }
 
 /* Media Screens */
+@media (max-width: 500px) {
+  .card-li {
+    font-size: 50% !important;
+  }
+}
+
 @media (max-width: 775px) {
   header {
     flex-direction: column;
@@ -234,9 +240,6 @@ footer {
   .hide-word {
     display: none;
   }
-  /* .card-result-img {
-    width: 125px;
-  } */
   .clear-list,
   .name-list,
   .save-list {
