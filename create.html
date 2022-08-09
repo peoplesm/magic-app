@@ -58,11 +58,14 @@
 
     <main class="container">
       <div class="row p-2">
-        <div class="col-4 col-xl-3">
+        <div class="col-3 col-lg-2">
           <!-- Search Input -->
           <form class="form-outline search-input">
             <input type="text" id="form12" class="form-control searchInput" />
-            <label class="form-label" for="form12" style="color: white"
+            <label
+              class="form-label search-placeholder"
+              for="form12"
+              style="color: white"
               >Card Name</label
             ><button class="btn btn-black search" type="submit">
               <i class="fas fa-search"></i>
@@ -70,25 +73,34 @@
           </form>
         </div>
         <!-- Search Results -->
-        <div class="col-6 col-xl-6 text-center">
+        <div class="col-6 col-lg-7 text-center">
           Results:
 
           <div class="search-results"></div>
         </div>
         <!-- Recently Added List -->
-        <div class="col-2 col-xl-3 text-center">
+        <div class="col-3 col-lg-3 text-center">
           <section class="recently-added-cont">
-            Recently Added
+            <span class="hide-word">Recently Added</span>
             <br />
-            <button class="btn btn-black recent-btns save-list" type="button">
-              Save List
+            <button
+              class="btn btn-black recent-btns save-list"
+              data-mdb-toggle="tooltip"
+              title="Save List"
+              type="button"
+            >
+              <i class="fas fa-save show-img"></i>
+              <span class="hide-word">Save List</span>
             </button>
             <a href="./wishlist.html"
               ><button
                 class="btn btn-black recent-btns name-list"
+                data-mdb-toggle="tooltip"
+                title="Name List"
                 type="button"
               >
-                Name List
+                <i class="fas fa-file-signature show-img"></i>
+                <span class="hide-word">Name List</span>
               </button></a
             >
             <button
@@ -97,7 +109,7 @@
               data-mdb-toggle="tooltip"
               title="Clear List!"
             >
-              <i class="fas fa-eraser"></i>
+              <i class="fas fa-eraser" style="display: block"></i>
             </button>
             <ul class="list-group recently-added"></ul>
           </section>
