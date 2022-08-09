@@ -45,6 +45,7 @@ function searchCard(searchInput) {
               "width: 150px; border-radius: 10px; z-index: 5"
             );
             cardImg.setAttribute("data-name", data.data[i].name);
+            cardImg.setAttribute("data-price", data.data[i].prices.usd);
             cardImg.classList.add("card-result-img");
             cardImg.addEventListener("click", handleCardClick);
           }
@@ -61,9 +62,11 @@ function handleCardClick(event) {
   console.log(event);
   let cardName = event.target.attributes["data-name"].nodeValue;
   let cardImg = event.target.currentSrc;
+  let cardPrice = event.target.attributes["data-price"].nodeValue;
   let cardObj = {
     cardName: cardName,
     cardImg: cardImg,
+    cardPrice: cardPrice,
   };
   savedCardArr.push(cardObj);
   let i = savedCardArr.indexOf(cardObj);
