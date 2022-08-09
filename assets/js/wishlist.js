@@ -11,6 +11,8 @@ let wishName = document.querySelector(".name");
 let wishDate = document.querySelector(".date");
 let wishComment = document.querySelector(".comment");
 let submitBtn = document.querySelector(".send");
+let priceBtn = document.querySelector(".price");
+let modalBody = document.querySelector(".modal-body");
 let date = document.createElement("p");
 let gifSection = document.querySelector(".gif-section");
 let comment = document.createElement("p");
@@ -20,21 +22,25 @@ let listName = document.createElement("p");
 function getGIF(deckObject) {
   let gifyAPI =
     gifyURL + gifSearch.value.trim() + "&limit=1&offset=0&rating=pg&lang=en";
-  fetch(gifyAPI).then(function (response) {
-    if (response.ok) {
-      response.json().then(function (data) {
-        console.log(response);
-        let gifAttach = data.data[0].images.original.url;
-        deckObject.formGif = gifAttach;
-        formArr.push(deckObject);
-        localStorage.setItem("form", JSON.stringify(formArr));
-        let addGif = document.createElement("img");
-        addGif.setAttribute("src", gifAttach);
-        addGif.classList.add("gifClass");
-        gifSection.append(addGif);
-      });
-    }
-  }); //add a catch or an empty string formGif
+  fetch(gifyAPI)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          console.log(response);
+          let gifAttach = data.data[0].images.original.url;
+          deckObject.formGif = gifAttach;
+          formArr.push(deckObject);
+          localStorage.setItem("form", JSON.stringify(formArr));
+          let addGif = document.createElement("img");
+          addGif.setAttribute("src", gifAttach);
+          addGif.classList.add("gifClass");
+          gifSection.append(addGif);
+        });
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
 }
 
 //Fxn that builds the array from the form inputed by user
@@ -63,6 +69,23 @@ function formSubmission() {
   formInfo.append(listName);
   formInfo.append(date);
   formInfo.append(comment);
+
+  // let deckPrice = addPrice();
+  // modalBody.textContent = `$${deckPrice}`;
+}
+
+function addPrice() {
+  let price = 0;
+  for (let i = 0; i < arrCardWishlist.length; i++) {
+    let cardPrice = arrCardWishlist[i].cardPrice;
+    if (cardPrice == "null") {
+      cardPrice = 0;
+    } else {
+      cardPrice = Number(arrCardWishlist[i].cardPrice);
+    }
+    price = price + cardPrice;
+  }
+  return Math.round(100 * price) / 100;
 }
 
 // displaying cards on wishlist
@@ -104,7 +127,8 @@ document.onreadystatechange = function () {
     //Checks to see if the user saved a deck on the create page to display said deck
     if (localStorage.getItem("deck")) {
       arrCardWishlist = JSON.parse(localStorage.getItem("deck"));
-      // put an else here that pops a modole thing saying to go create a deck
+      let deckPrice = addPrice();
+      modalBody.textContent = `$${deckPrice}`;
       displayCardz();
     }
     //Checks to see if there is already a form saved to localStorage to fill the formArr & render it

@@ -155,6 +155,16 @@ textarea {
   height: auto;
 }
 
+.form-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-content {
+  color: black;
+  font-size: 175%;
+}
+
 /* Create.html styles */
 .search-input {
   display: flex;
