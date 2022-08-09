@@ -53,6 +53,8 @@ GIVEN a Magic the Gathering search platform
 <li>Provide estimated card prices and allow users to total those prices for each card wishlist created</li>
 <li>Make our search engin more dynamic with search options and filters</li>
 <li>Add a feature to search locations of Magic events</li>
+<li>Add a feature to click on the featured card from home page and add it to user’s wishlist
+</li>
 </ul>
 
 [Deployed Site](https://peoplesm.github.io/magic-app/)
