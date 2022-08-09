@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Almendra&family=Eagle+Lake&display=swap"
       rel="stylesheet"
     />
+    <!-- MDB -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
       rel="stylesheet"
@@ -28,7 +29,7 @@
     <title>Magic App</title>
   </head>
 
-  <body class="sticky-footer">
+  <body>
     <header>
       <div class="image-logo">
         <a href="index.html" title="Home"
@@ -37,6 +38,7 @@
         <h1>Card <br />Wishlist <br />Creator</h1>
       </div>
       <h2 class="sub-page">Create</h2>
+      <!-- Nav -->
       <nav>
         <ul class="nav-ul">
           <button>
@@ -53,9 +55,11 @@
         </ul>
       </nav>
     </header>
+
     <main class="container">
       <div class="row p-2">
         <div class="col-4 col-xl-3">
+          <!-- Search Input -->
           <form class="form-outline search-input">
             <input type="text" id="form12" class="form-control searchInput" />
             <label class="form-label" for="form12" style="color: white"
@@ -65,11 +69,13 @@
             </button>
           </form>
         </div>
+        <!-- Search Results -->
         <div class="col-6 col-xl-6 text-center">
           Results:
 
           <div class="search-results"></div>
         </div>
+        <!-- Recently Added List -->
         <div class="col-2 col-xl-3 text-center">
           <section class="recently-added-cont">
             Recently Added
