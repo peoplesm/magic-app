@@ -1,4 +1,4 @@
-/* INDEX HTML */
+/* General Styleing */
 body {
   background-image: url(../../assets/images/dark-denim.jpg);
   background-repeat: repeat;
@@ -93,6 +93,7 @@ h1 {
   color: black;
 }
 
+/* INDEX HTML  */
 .carousel-inner img {
   margin: auto;
 }
@@ -124,7 +125,6 @@ textarea {
   font-size: 45px;
 }
 
-/* wishlist.html styles */
 .wish-main {
   padding-top: 10px;
   padding-bottom: 10px;
