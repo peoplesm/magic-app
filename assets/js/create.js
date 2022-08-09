@@ -21,11 +21,10 @@ function handleInput(event) {
 //API call based on user's input. Initiated by the handleInput fxn
 function searchCard(searchInput) {
   let apiUrl = `https://api.scryfall.com/cards/search?q=${searchInput}`;
-  fetch(apiUrl).then(function (response) {
-    if (response.ok) {
-      response
-        .json()
-        .then(function (data) {
+  fetch(apiUrl)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
           console.log(data);
           //Logic for listing the card images that get returned.
           for (let i = 0; i < data.data.length; i++) {
@@ -44,12 +43,12 @@ function searchCard(searchInput) {
             cardImg.classList.add("card-result-img");
             cardImg.addEventListener("click", handleCardClick);
           }
-        })
-        .catch((error) => {
-          console.log("error", error);
         });
-    }
-  });
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
 }
 
 //Building the deck based on user clicks on the generated card list.

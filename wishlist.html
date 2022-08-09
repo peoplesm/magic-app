@@ -100,10 +100,59 @@
         </div>
         <br />
         <!-- Submit button -->
-        <button type="submit" class="btn btn-black btn-block send">Send</button>
+        <div class="form-btns">
+          <button
+            type="submit"
+            class="btn btn-black btn-block send"
+            style="width: 45%"
+          >
+            Send
+          </button>
+          <button
+            type="button"
+            class="btn btn-black btn-block price"
+            style="margin: 0; width: 45%"
+            data-mdb-toggle="modal"
+            data-mdb-target="#exampleModal"
+          >
+            Price Deck
+          </button>
+        </div>
       </form>
     </main>
     <footer>Created by Matt, Monica, Levi</footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Deck Price</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-mdb-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-mdb-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"
